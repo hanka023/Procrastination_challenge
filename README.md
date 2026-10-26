@@ -15,7 +15,9 @@ you have to decide if P[x,y] is inside of polygon or outside
 
 compile: make
 
-start: ./poly [x,y] example: ./poly 5, 6
+start: ./poly [x,y] 
+
+example: ./poly 5, 6
 
 ## Challenge
 
