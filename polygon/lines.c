@@ -76,11 +76,6 @@ int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 	set_lst_prev (lst);
 	while (lst != NULL)
 	{
-		// if ((lst -> x1 == x) && (lst -> x2 == x))
-		// {
-		// 	lst = lst -> next;  
-		// 	continue;
-		// }
 		if (is_edge_point(lst, point))
 		{
 			lst = lst -> next;
@@ -97,7 +92,6 @@ int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 				lst = lst -> next;
 			}
 		}
-
 		else 
 			is_line(lst, point, line);
 		lst = lst -> next;
