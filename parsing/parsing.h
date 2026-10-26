@@ -52,6 +52,7 @@ t_list	*new_list(char *str);
 void	add_back(t_list **head, t_list *new);
 void	print_list(t_list *begin_list);
 void	free_list(t_list *lst);
+int		set_lst_prev(t_list *lst);
 
 /* * * * * * * read_args.c * * * * * * */
 

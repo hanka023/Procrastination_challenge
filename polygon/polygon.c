@@ -64,9 +64,6 @@ int count_y_for_my_x(t_list *lst, t_point *point)
 	x = point -> x;
 	y = point -> y;
 	y_p = (lst -> y_x * x) + (lst -> y_0);
-	//printf ("y na prince [%d]\n", y_p);
-	//return (y);
-	//printf ("---------------- y[%d] y_p[%.2f]\n", point -> y, lst -> y_x);
 	if (y_p > y)
 		return (1);
 	else if (y_p == y)
@@ -77,29 +74,6 @@ int count_y_for_my_x(t_list *lst, t_point *point)
 
 }
 
-int is_x_in_line(t_list *lst, t_point *point, t_line *line)
-{
-	int x;
-	int y;
-
-	x = point -> x;
-	while (lst != NULL)
-	{
-		y = 0;
-		if (x >= lst -> x_min && x <= lst -> x_max)
-		{
-			y = count_y_for_my_x(lst, point);
-			if (y == 1)
-				++line -> top;
-			else if (y == -1)
-				++line -> bot;
-			else if (y == 0)
-				line -> is_on_line = 1;
-		}
-		lst = lst -> next;
-	}
-	return (0);
-}
 
 t_line *set_line()
 {

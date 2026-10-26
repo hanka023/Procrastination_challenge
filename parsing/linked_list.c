@@ -32,7 +32,6 @@ void	add_back(t_list **head, t_list *lst)
 }
 
 
-
 void	print_list(t_list *lst)
 {
 	int i = 0;
@@ -63,3 +62,14 @@ void	free_list(t_list *lst)
 	return ;
 }
 
+int set_lst_prev(t_list *lst)
+{
+	lst -> prev = NULL;
+	lst = lst -> next;
+	while (lst != NULL && lst -> next != NULL)
+	{
+		(lst -> next -> prev) = lst;
+		lst = lst -> next;
+	}
+	return (0);
+}

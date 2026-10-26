@@ -15,6 +15,7 @@ SRC =   main.c          \
 		parsing/linked_list.c	\
 		parsing/read_args.c		\
         parsing/utils.c       	\
+		polygon/lines.c			\
 		polygon/polygon.c		\
 
 
