@@ -22,17 +22,26 @@ int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 	set_lst_prev (lst);
 	while (lst != NULL)
 	{
-		if (lst -> prev != NULL && lst -> x1 == lst -> prev -> x2)
-			lst = lst -> next;
+		// if (lst -> prev != NULL && lst -> x1 == lst -> prev -> x2)
+		// {
+
+		// }
+		// 	lst = lst -> next;  ///doladit !!!
 		if (lst -> x1 <= lst -> x2)
 		{
 			if (x >= lst -> x1 && x <= lst -> x2)
+			{
+				printf ("line x1[%d]  x2[%d]\n",lst -> x1, lst -> x2);
 				count_y(lst, point, line);
+			}
 		}
 		else if(lst -> x1 > lst -> x2)
 		{
 			if (x >= lst -> x2 && x <= lst -> x1)
+			{
+				printf ("line x1[%d]  x2[%d]\n",lst -> x1, lst -> x2);
 				count_y(lst, point, line);	
+			}
 		}
 		lst = lst -> next;
 	}
