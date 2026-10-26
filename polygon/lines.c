@@ -14,6 +14,20 @@ int count_y(t_list *lst, t_point *point, t_line *line)
 	return (0);
 }
 
+int is_edge_point(t_list *lst, t_point *point)
+{
+	int x;
+
+	x = point -> x;
+
+	if (lst -> x2 == x )
+	{
+		if ((lst->x1 < x && lst->next -> x2 < x) || (lst->x1 > x && lst->next->x2 > x))
+		return (1);
+	}
+	return (0);
+}
+
 int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 {
 	int x;
@@ -22,12 +36,17 @@ int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 	set_lst_prev (lst);
 	while (lst != NULL)
 	{
-		// if (lst -> prev != NULL && lst -> x1 == lst -> prev -> x2)
-		// {
-
-		// }
-		// 	lst = lst -> next;  ///doladit !!!
-		if (lst -> x1 <= lst -> x2)
+		if ((lst -> x1 == x) && (lst -> x2 == x))
+		{
+			lst = lst -> next;  
+			continue;
+		}
+		 if (is_edge_point(lst, point))
+		{
+			lst = lst -> next;
+			lst = lst -> next;
+		}
+		else if (lst -> x1 <= lst -> x2)
 		{
 			if (x >= lst -> x1 && x <= lst -> x2)
 			{
