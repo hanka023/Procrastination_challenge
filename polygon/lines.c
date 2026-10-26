@@ -80,9 +80,9 @@ int is_point_on_edge(t_list *lst, t_point *point, t_line *line)
 		line -> is_on_line = 1;
 	else if ((lst -> x1 == x) && (lst -> x2 == x))
 	{
-		if ((lst -> y1 < lst -> y2) && (y > lst -> y1 && y > lst -> y2))
+		if ((lst -> y1 < lst -> y2) && (y > lst -> y1 && y < lst -> y2))
 			line -> is_on_line = 1;
-		else if ((lst -> y2 < lst -> y1) && (y > lst -> y2 && y > lst -> y1))
+		else if ((lst -> y2 < lst -> y1) && (y > lst -> y2 && y < lst -> y1))
 			line -> is_on_line = 1;
 	}
 	return (0);
