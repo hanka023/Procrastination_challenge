@@ -5,10 +5,12 @@ int	ft_atoi(char *str)
 	int	i;
 	int	sign;
 	int	result;
+	int len;
 
 	i = 0;
 	sign = 1;
 	result = 0;
+	len = 0;
 	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
 		++i;
 	if ((str[i] == '-') || (str[i] == '+'))
@@ -21,6 +23,7 @@ int	ft_atoi(char *str)
 	{
 		result = (result * 10) + (str[i] - 48);
 		++i;
+		++len;
 	}
 	result = (result * sign);
 	return (result);
@@ -37,6 +40,7 @@ int	ft_isdigit(int c)
 
 
 char	*ft_strdup(const char *str)
+
 {
 	int		i;
 	int		len;
