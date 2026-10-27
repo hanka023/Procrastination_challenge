@@ -3,14 +3,14 @@
 
 t_list	*points_to_lst(int fd)
 {
-	int		i;
+	//int		i;
 	char	*line;
 	t_list *head;
 	t_list	*lst;
 
 	lst = NULL;
 	line = NULL;
-	i = 0;
+	//i = 0;
 	head = NULL;
 
 	while ((line = get_next_line(fd)) != NULL)
@@ -32,7 +32,7 @@ t_list	*points_to_lst(int fd)
 			return(NULL);
 		}
 		add_back(&head, lst);
-		++i;
+		//++i;
 		free(line);
 	}
 	close (fd);
