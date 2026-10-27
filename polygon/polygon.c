@@ -71,7 +71,6 @@ int count_y_for_my_x(t_list *lst, t_point *point)
 	else if (y_p < y)
 		return (-1); 
 	return (0);
-
 }
 
 
