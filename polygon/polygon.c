@@ -39,7 +39,7 @@ void set_y(t_list *lst)
 		if ((lst -> x2 - lst -> x1) == 0)
 			lst -> y_x = 0;
 		else
-			lst -> y_x = (lst -> y2 - lst -> y1) / (lst -> x2 - lst -> x1);
+			lst -> y_x = (float)(lst -> y2 - lst -> y1) / (lst -> x2 - lst -> x1);
 		lst -> y_0 = (lst -> y1) - (lst -> x1 * lst -> y_x);
 		lst = lst -> next;
 	}
