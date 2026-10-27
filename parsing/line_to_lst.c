@@ -1,8 +1,6 @@
 #include "parsing.h"
 
 
-
-
 t_list	*points_to_lst(int fd)
 {
 	int		i;
@@ -113,8 +111,6 @@ int line_to_numbers(char *line, t_list *lst)
 
 	lst -> x1 = ft_atoi(numbers[0]);
 	lst -> y1 = ft_atoi(numbers[1]);
-	// lst -> x2 = ft_atoi(numbers[2]);
-	// lst -> y2 = ft_atoi(numbers[3]);
 	free_numbers(numbers);
 	return (0);
 }

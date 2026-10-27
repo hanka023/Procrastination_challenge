@@ -37,7 +37,6 @@ int	ft_isdigit(int c)
 
 
 char	*ft_strdup(const char *str)
-
 {
 	int		i;
 	int		len;

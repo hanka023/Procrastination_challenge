@@ -33,7 +33,6 @@ t_point *point_part(int ac, char *av[])
 	return (point);
 }
 
-
 int main(int ac, char *av[])
 {
 	t_list *lst; 
@@ -47,13 +46,11 @@ int main(int ac, char *av[])
 	{
 		free_list (lst);
 		return(0);
-	}
-	
+	}	
 	print_list(lst);
 	printf ("point P:  	x[%d] y[%d]\n", point -> x, point -> y);
 	printf ("- - - - - - - - - - - - - - - - - - - - - - \n");
 	polygon(lst, point);
-
 	free_list(lst);
 	free(point);
 	return (0);

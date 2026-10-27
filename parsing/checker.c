@@ -32,11 +32,23 @@ int check_list(t_list *lst)
 	return (count);
 }
 
+int check_comment(char *line)
+{
+	while ((*line == ' ') || (*line >= 9 && *line <= 13))
+		++line;
+	if((*line == '/') && *(line + 1) == '/')
+		return (1);
+	else
+		return (0);
+}
+
 int check_line(char *line)
 {
 	int i = 0;
 	int c = 0;
 
+	if (check_comment(line))
+		return (2);
 	while (*line)
 	{
 		if(!ft_isdigit(*line))

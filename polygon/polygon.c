@@ -34,8 +34,8 @@ void set_y(t_list *lst)
 {
 	while (lst != NULL)
 	{
-		//printf ("lst y2[%d], lst y1 [%d], lst x2 [%d], lst x1[%d]\n", lst -> y2, lst ->y1, lst -> x2, lst -> x1);
-		//printf (" x2 - x1 [%d]\n", lst ->x2 - lst ->x1);
+		// printf ("lst y2[%d], lst y1 [%d], lst x2 [%d], lst x1[%d]\n", lst -> y2, lst ->y1, lst -> x2, lst -> x1);
+		// printf (" x2 - x1 [%d]\n", lst ->x2 - lst ->x1);
 		if ((lst -> x2 - lst -> x1) == 0)
 			lst -> y_x = 0;
 		else
@@ -117,10 +117,9 @@ int polygon(t_list *lst, t_point *point)
 	t_line *line;
 	line = set_line ();
 	set_x(lst);
-	//print_x(lst);
 	set_y(lst);
-	//print_y(lst);	
 	is_x_in_line(lst, point, line);
+	//printf ("is x in line ok\n");
 	printf ("top_lines[%d] bot_lines[%d] is_on_line[%d]\n", line->top, line->bot, line->is_on_line);
 	if (line -> is_on_line == 1)
 	{
@@ -128,8 +127,7 @@ int polygon(t_list *lst, t_point *point)
 		free (line);
 		return (0);
 	}
-	count_position( line);
-	
+	count_position(line);
 	free (line);
 	return (0);
 }
