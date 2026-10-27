@@ -51,10 +51,8 @@ int is_edge_line(t_list *lst, t_point *point)
 	int x;
 	t_list *tmp;
 	
-
 	x = point -> x;
 	
-
 	if (lst && lst -> x2 == x  && ((lst->next != NULL) && (lst->next->next != NULL)))
 	{
 		if((lst->next->x1 == x) && (lst->next->x2 == x))
@@ -99,19 +97,9 @@ int point_on_edge (t_list *lst, t_point *point, t_line *line)
 }
 
 
-
-
-
-
-
 int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 {
-	// if((point -> x == lst ->x1) && (point-> y == lst-> y1))
-	// {
-	// 	firts_point(lst, point, line);
-	// 	return(0);
-	// }
-	
+
 	while (lst != NULL)
 	{
 		point_on_edge(lst, point, line);

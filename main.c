@@ -23,9 +23,6 @@ t_list *lst_part()
 t_point *point_part(int ac, char *av[])
 {
 	t_point *point;
-	
-	if(ac < 2 || ac > 5)
-		return (NULL);
 
 	point = read_args(ac, av);
 	if (!point)
@@ -38,6 +35,9 @@ int main(int ac, char *av[])
 	t_list *lst; 
 	t_point *point;
 
+
+	if(ac != 3)
+		return (0);
 	lst = lst_part();
 	if (!lst)
 		return (0);

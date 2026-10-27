@@ -3,16 +3,13 @@
 
 t_list	*points_to_lst(int fd)
 {
-	//int		i;
 	char	*line;
 	t_list *head;
 	t_list	*lst;
 
 	lst = NULL;
 	line = NULL;
-	//i = 0;
 	head = NULL;
-
 	while ((line = get_next_line(fd)) != NULL)
 	{
 		if (check_line(line) == -1)
@@ -32,13 +29,11 @@ t_list	*points_to_lst(int fd)
 			return(NULL);
 		}
 		add_back(&head, lst);
-		//++i;
 		free(line);
 	}
 	close (fd);
 	return(head);
 }
-
 
 void free_numbers(char **str)
 {
