@@ -38,7 +38,7 @@ int is_edge_point(t_list *lst, t_point *point)
 
 	x = point -> x;
 
-	if (lst -> x2 == x )
+	if (lst -> x2 == x && lst ->next)
 	{
 		if ((lst->x1 < x && lst->next -> x2 < x) || (lst->x1 > x && lst->next->x2 > x))
 		return (1);
@@ -119,14 +119,14 @@ int is_x_in_line(t_list *lst, t_point *point, t_line *line)
 		{	
 			if (lst -> next)
 				lst = lst -> next;
-			if (lst -> next -> next)
+			if (lst -> next)
 				lst = lst -> next;
 		}
 		if (is_edge_line(lst, point))
 		{
 			if (lst -> next)
 				lst = lst -> next;
-			if (lst -> next -> next)
+			if (lst -> next)
 				lst = lst -> next;
 		}
 		is_line(lst, point, line);
