@@ -25,6 +25,11 @@ int	ft_atoi(char *str)
 		++i;
 		++len;
 	}
+	if (len > 5)
+	{
+		printf ("moc dlouhe cislo v arg !!!\n\n");
+		return (0);
+	}
 	result = (result * sign);
 	return (result);
 }
