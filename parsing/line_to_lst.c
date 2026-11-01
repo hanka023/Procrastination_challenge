@@ -59,7 +59,7 @@ char **number_split(char *line)
 		return (NULL);
 	while (i < 2)
 	{
-		numbers[i] = malloc(sizeof (char) * 4);
+		numbers[i] = malloc(sizeof (char) * 5);
 		if ( !numbers[i])
 		{
 			free_numbers(numbers);
@@ -72,11 +72,11 @@ char **number_split(char *line)
 
 	while (line[len] && line[len] != '\0' && i < 2)
 	{
-		while (line[len] && !ft_isalnum(line[len]))
+		while (line[len] && !ft_isdigit(line[len]))
 			++len;
-		if (ft_isalnum(line[len]))
+		if (ft_isdigit(line[len]))
 		{
-			while(line[len] && ft_isalnum(line[len]) && j < 3)
+			while(line[len] && ft_isdigit(line[len]) && j < 3)
 			{
 				numbers[i][j] = line[len];
 				++len;

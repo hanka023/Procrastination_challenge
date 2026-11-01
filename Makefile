@@ -17,6 +17,7 @@ SRC =   main.c          \
         parsing/utils.c       	\
 		polygon/lines.c			\
 		polygon/polygon.c		\
+	
 
 
 # Změna koncovek .c na .o pro objekty

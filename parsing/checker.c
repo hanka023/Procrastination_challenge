@@ -53,7 +53,7 @@ int check_line(char *line)
 	{
 		if(!ft_isdigit(*line))
 			c = 0;
-		else if (ft_isdigit(*line))
+		else if (ft_isdigit(*line) && *line != '-' && *line != '+')
 		{
 			if (c == 0)
 				++i;

@@ -15,6 +15,9 @@ typedef struct s_line
 }	t_line;
 
 
+
+//int polygon_xchaos(int x, int y,char *array);
+
 /* * * * * * * polygon.c * * * * * * */
 
 void set_x(t_list *lst);

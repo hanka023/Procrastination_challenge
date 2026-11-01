@@ -34,14 +34,24 @@ int	ft_atoi(char *str)
 	return (result);
 }
 
+// int	ft_isdigit(int c)
+// {
+// 	//printf (" c v isdigit char c[%c] int c[%d]\n", c, c);
+// 	if (c >= 48 && c <= 57 )
+// 		return (1);
+// 	else
+// 		return (0);
+// }
+
 int	ft_isdigit(int c)
 {
 	//printf (" c v isdigit char c[%c] int c[%d]\n", c, c);
-	if (c >= 48 && c <= 57)
+	if ((c >= 48 && c <= 57) || c == '-' || c =='+')
 		return (1);
 	else
 		return (0);
 }
+
 
 
 char	*ft_strdup(const char *str)

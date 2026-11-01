@@ -1,8 +1,11 @@
-polygon - souradnice:
-0 0 
-0 1
-0 2
-2 2
+polygon - souradnice
+
+-2 -2 
+2 -2
+2 2 
+-2 2
+
+
 
 
 
